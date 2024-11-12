@@ -2,6 +2,8 @@ import pandas as pd
 import streamlit as st
 from sqlalchemy import create_engine
 from sqlalchemy import create_engine, text
+import sqlalchemy
+
 
 
 # Display the PNG image in the top centre of the Streamlit sidebar with custom dimensions
