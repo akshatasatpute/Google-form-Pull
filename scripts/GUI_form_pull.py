@@ -1,6 +1,7 @@
 import pandas as pd
 import streamlit as st
 import sqlalchemy
+import gspread
 from sqlalchemy import create_engine
 from sqlalchemy import create_engine, text
 
