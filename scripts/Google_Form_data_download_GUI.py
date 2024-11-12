@@ -1,22 +1,15 @@
 import pandas as pd
 import streamlit as st
-import gspread
-from oauth2client.service_account import ServiceAccountCredentials
-import os
 import requests
 from io import StringIO  # Import StringIO directly from the io module
 from io import BytesIO
 from datetime import datetime
-#from supabase import create_client, Client
-from supabase.client import ClientOptions
 import gspread
-from google.oauth2 import service_account
 import json
 import numpy as np
-import boto3
 from sqlalchemy import create_engine
 from sqlalchemy import create_engine, text
-from botocore.exceptions import NoCredentialsError
+from openpyxl.workbook import Workbook
 
 
 # Display the PNG image in the top centre of the Streamlit sidebar with custom dimensions
@@ -75,6 +68,5 @@ if st.button(combined_button_text):
         # Save the data to a google sheet.
         df.to_excel(r"C:\Users\User\Downloads\Mentor data file.xlsx")
         st.success("Mentor Recruitment data saved successfully in Mentor data file.")
-
 
 
