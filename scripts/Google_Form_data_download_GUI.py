@@ -29,11 +29,12 @@ Form_name=st.radio('Choose the Google form GUI you want to access data',('Mentor
 combined_button_text = "Download"
 
 # Define your AWS RDS database connection settings
-username = 'vigyan'
-password = '321#Dev'
-host = '35.154.220.255'
-port = 3306  # Replace with your MySQL port if different
-database_name = 'vigyan'
+username = st.secrets['DB_USERNAME']
+password = st.secrets['DB_PASSWORD']
+host = st.secrets['DB_ENDPOINT']
+port = st.secrets['DB_PORT']  # Replace with your MySQL port if different
+database_name = st.secrets['DB_NAME']
+
 
 # Create the connection string for the AWS RDS MySQL database using the create_engine function
 connection_string = f"mysql+mysqlconnector://{username}:{password}@{host}:{port}/{database_name}"
