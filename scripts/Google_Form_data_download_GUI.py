@@ -1,10 +1,22 @@
 import pandas as pd
 import streamlit as st
 import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+import os
+import requests
+from io import StringIO  # Import StringIO directly from the io module
+from io import BytesIO
+from datetime import datetime
+#from supabase import create_client, Client
+from supabase.client import ClientOptions
+import gspread
+from google.oauth2 import service_account
+import json
+import numpy as np
+import boto3
 from sqlalchemy import create_engine
 from sqlalchemy import create_engine, text
-import sqlalchemy
-
+from botocore.exceptions import NoCredentialsError
 
 
 # Display the PNG image in the top centre of the Streamlit sidebar with custom dimensions
